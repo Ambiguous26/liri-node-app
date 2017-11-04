@@ -1,3 +1,4 @@
+// npm install request --save
 var keys = require ("./keys.js");
 var fs = require("fs");
 var request = require("request");
@@ -5,7 +6,7 @@ var Twitter = require("twitter");
 // var Spotify = require("node-spotify-api");
 
 var option = process.argv[2];
-// var value = process.argv[3];
+var value = process.argv[3];
 
 var myTweets = function() {
 	// keys.twitter takes you to my keys file and pulls info under the twitter property
@@ -39,58 +40,64 @@ var myTweets = function() {
 		}
 	});
 
-};
+};//end of myTweets variable
+
+var spotifyThisSong = function(value) {
+	if(!value) {
+		value = 'The Sign'
+	}
+	var songTitle = value;
+	var spotify = new Spotify ({
+		id: keys.spotifyKeys.clientID,
+		secret: keys.spotifyKeys.clientSecret
+	});
+	// I know its type, query, and limit because of heveloper.spotify.com/web-api it shows you how the spotify searches using certain criterion
+	spotify.search({type: 'track', query: songTitle, limit:1}, function(err, data) {
+		if (err) {
+			return console.log("Error occurred: " + err);
+		}
+		var result = data.tracks.items[0];
+		var trackInfo = "Track Title: " + result.name +
+										",Artist(s): " + result.album.artists[0].name +
+										",Preview Link: " + result.external_uris.spotify +
+										",Album Name: " + result.album.name;
+		// the .split call separates every word with a "," It splits a string into an array of substrings.
+		var dataArr = trackInfo.split (",");
+		fs.appendFile("log.txt", "\nspotify-this-song: \n", function(err) {
+				if (err) {
+					return console.log(err);
+				}
+		});
+		for (i = 0; i < dataArr.length; i++) {
+			console.log(dataArr[i].trim());
+			fs.appendFile("log.txt", dataArr[i].trim() + "\n", function(err) {
+				if (err) {
+					return console.log(err);
+				}
+			});
+		}
+		console.log("\nThis song was added to log.txt");
+	
+	});//end of spotify search
+
+};//end of spotifyThisSong variable
+
+
 
 switch (option) {
 	case "my-tweets":
 		myTweets();
 		break;
 
+	case "spotify-this-song":
+		spotifyThisSong(value);
+		break;
+
 	default:
 		console.log("\nPlease enter one of the following:");
 		console.log("my-tweets");
+		console.log("spotify-this-song <Enter song title>");
 		break;
 };
 
 
-// cmd.get(
-// 	"pwd",
-// 	function (err, data, stderr) {
-// 		console.log("the current working dir is : ", data)
-// 		// body...
-// 	}
-// );
-
-
-// var fs = requre('fs');
-
-// fx.readFile('index.html', (err, html) => {
-// 	if (err){
-// 		throw err;
-// 	}
-
-
-
-// var spotify = require ("random.txt");
-// var hostname = "127.0.0.1";
-// var port = 3000;
-
-// var server = http.createServer ((req, res) => {
-// 	res. statusCoe = 200;
-// 	res.setHeader('Content-type', 'text/plain');
-// 	res.write(html);
-// 	res.end('Hello World!');
-// });
-
-// server.listen(port, hostname, () => {
-// 	console.log('server started on port ' +port);
-// });
-
-// });
-
-// var path = requre ("path");
-// var bodyParser = requre("body-parser");
-
-// var index = require ("index");
-
-// var app = express();
