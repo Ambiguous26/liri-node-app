@@ -103,7 +103,7 @@ var movieThis = function(value) {
 			var result = "Title: " + JSON.parse(body).Title + 
 						"\nYear: " + JSON.parse(body).Year +
 		    			"\nIMDB Rating: " + JSON.parse(body).imdbRating +
-		    			"\nRotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value +
+		    			"\nRotten Tomatoes Rating: " + JSON.parse(body).Ratings[0].Value +
 		    			"\nCountry: " + JSON.parse(body).Country +
 		    			"\nLanguage: " + JSON.parse(body).Language +
 		    			"\nPlot Summary: " + JSON.parse(body).Plot +
@@ -125,7 +125,32 @@ var movieThis = function(value) {
 
 };//end of movieThis variable
 
+var doWhatItSays = function(){
+	fs.readFile("random.txt", "utf8", function(error, data) {
+		if (error) {
+			console.log(error);
+		}
+		else {
+			var randomDataArray = data.split (',');
+			var action = randomDataArray[0];
+			var value = randomDataArray[1];
+			switch (action) {
+				case "my-tweets":
+					myTweets();
+					break;
 
+				case "spotify-this-song":
+					spotifyThisSong(value);
+					break;
+
+				case "movie-this":
+					movieThis(value);
+					break;
+			}
+		}
+
+	});
+};//end of doWhatItSays function
 
 // need to add the variable for what-to-do 
 
@@ -143,6 +168,10 @@ switch (option) {
 		movieThis(value);
 		break;
 
+	case "do-what-it-says":
+		doWhatItSays();
+		break;
+
 // Just need to add the case and switch for do what it says.
 
 
@@ -151,6 +180,7 @@ switch (option) {
 		console.log("my-tweets");
 		console.log("spotify-this-song <Enter song title>");
 		console.log("movie-this <Enter movie title>");
+		console.log("do-what-it-says");
 
 //Add the console.log for what to do
 		

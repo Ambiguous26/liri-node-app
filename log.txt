@@ -79,3 +79,92 @@ Country: USA
 Language: English, Spanish
 Plot Summary: A bored married couple is surprised to learn that they are both assassins hired by competing agencies to kill each other.
 Actors: Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody
+
+movie-this: 
+Title: Mr. & Mrs. Smith
+Year: 2005
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: 59%
+Country: USA
+Language: English, Spanish
+Plot Summary: A bored married couple is surprised to learn that they are both assassins hired by competing agencies to kill each other.
+Actors: Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: undefined
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: undefined
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: undefined
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: undefined
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: 7.4/10
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: 7.4/10
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
+
+movie-this: 
+Title: Ratrace
+Year: 1999
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: 7.4/10
+Country: Austria
+Language: N/A
+Plot Summary: N/A
+Actors: Haymon Maria Buttinger, Proschat Madani, Roman Kaminski, Werner Wultsch
